@@ -1,155 +1,151 @@
-const db = require('./connection');
-const { User, Product, Category } = require('../models');
+    const db = require('./connection');
+    const { User, Product, Category, Brand } = require('../models');
 
-db.once('open', async () => {
-  await Category.deleteMany();
+    db.once('open', async () => {
+        await Category.deleteMany();
 
-  const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
-  ]);
+        const categories = await Category.insertMany([
+            { name: 'Beauty & Health' },
+            { name: 'Facial care' },
+            { name: 'Hair care' },
+            { name: 'Skin care' },
+            { name: 'Nails' }
+        ]);
 
-  console.log('categories seeded');
+        const brands = await Brand.insertMany([
+            { name: 'Avéne' },
+            { name: 'Dercos'},
+            { name: 'Isdin'},
+            { name: 'Vichy' },
+            { name: 'TonyMoly' },
+        ]);
 
-  await Product.deleteMany();
+        console.log('categories seeded');
+        await Product.deleteMany();
 
-  const products = await Product.insertMany([
-    {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
-      category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
-    },
-    {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
-    },
-    {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
-    },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
-    },
-    {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
-    },
-    {
-      name: 'Camera',
-      category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
-    },
-    {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
-    },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
-  ]);
+        const products = await Product.insertMany([
+            {
+                name: 'Avéne Thermal Water',
+                brand: brands[0].id,
+                category: categories[3]._id,
+                description: 'Soothes and softens skin. Helps minimize skin sensitivity. Provides anti-oxidant protection.',
+                instruction: 'Use thermal spring water as a toner, spraying it on after cleansing, but before moisturizing your skin. Use it as a makeup setting spray. Throughout the day, mist your face with thermal spring water to leave it feeling fresh and soft.',
+                image: 'sc-avene-thermal-water.jpg',
+                price: 9.99,
+                quantity: 40
+            },
+            {
+                name: 'Avene Cicalfate',
+                brand: brands[0].id,
+                category: categories[0]._id,
+                description: 'Rich, nourishing cream, infused with post-biotic restorative ingredient, helps protect skin from external aggressors while maintaining proper hydration for optimal skin restoration.',
+                instruction: 'Product applied twice daily for 21 days. Repairing, protective and very well tolerated, Cicalfate+ Restorative Protection Cream is a multipurpose cream for the whole family\'s skin irritation needs.',
+                image: 'bh-avene-cicalfate.jpg',
+                price: .99,
+                quantity: 50
+            },
+            {
+                name: 'Dercos Energising Shampoo',
+                brand: brands[1].id,
+                category: categories[2]._id,
+                description: 'Vichy Energising scalp Shampoo is designed to reduce the rate of hair loss and maintain the density of thinning hair due to hair breaking.',
+                instruction: 'Massage in gently to wet hair. Rinse thoroughly with water. In combination with the Energising Conditioner for best results. Key Dermatological Ingredients.',
+                image: 'de-dercos-energising-shampoo.jpg',
+                price: 14.00,
+                quantity: 100
+            },
+            {
+                name: 'Masks Fresh To Go',
+                brand: brands[4].id,
+                category: categories[1]._id,
+                description: 'Natural cellulose fiber ensures a firm but gentle adherence making it suitable for all skin types.',
+                instruction: 'Apply mask on clean and towel dried face. Keep mask on face for 10-20 minutes. Remove mask and gently pat excess serum onto face and neck until fully absorbed.',
+                image: 'tm-masks-fresh-to-go.jpg',
+                price: 12.50,
+                quantity: 50
+            },
+            {
+                name: 'Si Nails',
+                brand: brands[2].id,
+                category: categories[4]._id,
+                description: 'Strengthen your nails with an invisible and easy-to-apply finish. Thanks to its combination of ingredients, it provides the nail with more keratin, hydration, silica, and more protection.',
+                image: 'is-si-nails.jpg',
+                price: 14.00,
+                quantity: 100
+            },
+            {
+                name: 'Vichy Mineral 89',
+                brand: brands[3].id,
+                description: 'Our best-selling hyaluronic acid booster is formulated with Pure Hyaluronic Acid and 15 Mineral-Rich Vichy Volcanic Water to strengthen & repair your skin barrier. ',
+                instruction: 'It is also fragrance-free and paraben-free. In the morning, apply 4-5 drops of the Lift-Active Vitamin C Serum to your clean, dry face, avoiding the eye area. Let sit for a few moments and then apply 2 drops of Mineral 89 to your face, avoiding the eye area. Mineral 89 may be used morning and evening.',
+                image: 'fc-vichy-mineral.jpg',
+                category: categories[1]._id,
+                price: 10.60,
+                quantity: 20
+            },
+            {
+                name: 'Vichy Slow Age',
+                brand: brands[3].id,
+                description: 'It is formulated with three naturally inspired active ingredients: antioxidant Baïcalin, probiotic-derived Bifidus and Vichy Materializing Thermal Water.',
+                instruction: 'Cleanse and tone the face. Follow with your usual serum. Using your ring finger, gently pat Slow Âge Eye Cream around the eye contour. Apply your usual moisturiser.',
+                image: 'fc-vichy-slow-age.jpg',
+                category: categories[1]._id,
+                price: 24.43,
+                quantity: 25
+            }
+        ]);
 
-  console.log('products seeded');
+        console.log('products seeded');
+        await User.deleteMany();
 
-  await User.deleteMany();
+        await User.create({
+            firstName: 'Ian',
+            lastName: 'Elizalde',
+            email: 'ian@mail.com',
+            password: '12345',
+            orders: [
+                {
+                    products: [products[0]._id, products[0]._id, products[1]._id]
+                }
+            ]
+        });
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
-  });
+        await User.create({
+            firstName: 'Luis',
+            lastName: 'Treviño',
+            email: 'luis@mail.com',
+            password: '12345',
+            orders: [
+                {
+                    products: [products[0]._id, products[0]._id, products[1]._id]
+                }
+            ]
+        });
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+        await User.create({
+            firstName: 'Aaron',
+            lastName: 'Marquez',
+            email: 'aaron@mail.com',
+            password: '12345',
+            orders: [
+                {
+                    products: [products[0]._id, products[0]._id, products[1]._id]
+                }
+            ]
+        });
 
-  console.log('users seeded');
+        await User.create({
+            firstName: 'Carlos',
+            lastName: 'Aguirre',
+            email: 'carlos@mail.com',
+            password: '12345',
+            orders: [
+                {
+                    products: [products[0]._id, products[0]._id, products[1]._id]
+                }
+            ]
+        });
 
-  process.exit();
-});
+        console.log('users seeded');
+        process.exit();
+    });
