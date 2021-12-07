@@ -42,25 +42,26 @@ function CategoryMenu() {
     };
 
     return (
-        <div>
-            <h2>Choose a Category:</h2>
-            {categories.map((item) => (
-                <button
-                    key={item._id}
-                    onClick={() => {
-                        handleClick(item._id);
-                    }}
+        <section className="category">
+            <div className="c-wrapper">
+                {categories.map((item) => (
+                    <button
+                        key={item._id}
+                        onClick={() => {
+                            handleClick(item._id);
+                        }}
+                    >
+                        {item.name}
+                    </button>
+                ))}
+                <button onClick={() => {
+                    handleClick();
+                }}
                 >
-                    {item.name}
+                    ALL
                 </button>
-            ))}
-            <button onClick={() => {
-                handleClick();
-            }}
-            >
-                ALL
-            </button>
-        </div>
+            </div>
+        </section>
     );
 }
 
