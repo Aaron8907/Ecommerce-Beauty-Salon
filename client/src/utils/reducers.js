@@ -9,10 +9,13 @@ import {
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
   TOGGLE_CART,
+  SET_FIRSTNAME,
+  GET_FIRSTNAME,
 } from './actions';
 
 // TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
 export const reducer = (state, action) => {
+  console.log(action)
   switch (action.type) {
     // TODO: Add a comment describing the functionality of the UPDATE_PRODUCTS case
     // Returns the products
@@ -20,6 +23,12 @@ export const reducer = (state, action) => {
       return {
         ...state,
         products: [...action.products],
+      };
+
+    case SET_FIRSTNAME:
+      return {
+        ...state,
+        firstName: action.firstName,
       };
 
     case ADD_TO_CART:

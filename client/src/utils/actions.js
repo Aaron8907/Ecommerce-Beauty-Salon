@@ -1,4 +1,6 @@
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
+export const SET_FIRSTNAME = "SET_FIRSTNAME";
+export const GET_FIRSTNAME = "GET_FIRSTNAME";
 
 export const ADD_TO_CART = "ADD_TO_CART";
 export const ADD_MULTIPLE_TO_CART = "ADD_MULTIPLE_TO_CART";
