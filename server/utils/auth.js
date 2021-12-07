@@ -28,7 +28,8 @@
         },
         signToken: function ({ firstName, email, _id }) {
             const payload = { firstName, email, _id };
+            console.log({firstName})            
 
-            return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+            return jwt.sign({ data: payload }, secret, { expiresIn: expiration },{firstName});
         },
     };

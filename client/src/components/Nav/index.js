@@ -1,17 +1,28 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import { useStoreContext } from '../../utils/GlobalState'
 
 function Nav() {
-
-  function showNavigation() {
+// accesar al store provider para tener firstName
+const [state, dispatch] = useStoreContext();
+// console.log(state);
+  function showNavigation(name) {
+    console.log(name, state);
+    // recibe argumento/prop
     if (Auth.loggedIn()) {
+      // console.log(Auth)
       return (
         <ul className="flex-row">
           <li className="mx-1">
             <Link to="/orderHistory">
               Order History
             </Link>
+          </li>
+          <li className="mx-1">
+            
+              Hello {name}          
+            
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -49,7 +60,8 @@ function Nav() {
       </h1>
 
       <nav>
-        {showNavigation()}
+        {showNavigation(state.firstName)}
+        
       </nav>
     </header>
   );

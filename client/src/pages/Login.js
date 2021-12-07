@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import { useStoreContext } from '../utils/GlobalState'
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { SET_FIRSTNAME } from '../utils/actions';
+import { useHistory } from 'react-router-dom';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
+  const [state, dispatch] = useStoreContext();
+  let history = useHistory();
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -15,7 +20,14 @@ function Login(props) {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.login(token);
+      const userName = mutationResponse.data.login.user.firstName;
+      await dispatch({type:SET_FIRSTNAME, firstName:userName});
+
+      const authSuccess = Auth.login(token);
+      console.log(authSuccess);
+      if (authSuccess) {
+        history.push('/')
+      }
     } catch (e) {
       console.log(e);
     }
@@ -69,3 +81,4 @@ function Login(props) {
 }
 
 export default Login;
+
