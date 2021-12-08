@@ -1,11 +1,16 @@
     body {
+        background: #ffd1d1;
         margin: 0 auto;
         .header {
             width: 100%;
             background: none;
             border-top: 1px solid #ff9898;
-            padding: 30px 24px;
+            padding: 0 0 30px;
             position: fixed;
+            -webkit-transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -o-transition: all .3s linear;
+            transition: all .3s linear;
             &.nav-fixed {
                 width: 100%;
                 position: fixed;
@@ -22,6 +27,8 @@
                 -o-transition: all .3s linear;
                 transition: all .3s linear;
                 .h-wrapper {
+                    width: 95%;
+                    margin: 0 auto;
                     h1 {
                         font-size: 2em;
                         a {
@@ -37,14 +44,17 @@
                         }
                     }
                 }
+                .h-top {
+                    display: none;
+                }
             }
             .h-wrapper {
-                width: 95%;
+                width: 93%;
                 max-width: none;
                 align-items: center;
                 display: flex;
                 justify-content: space-between;
-                margin: 0 auto;
+                margin: 20px auto 0;
                 h1 {
                     width: 20%;
                     color: #fff;
@@ -79,11 +89,38 @@
                                 text-decoration: none;
                             }
                             span {
-                                color: #ff5f9d;
+                                background: #ff5f9d;
+                                color: #000;
                                 font-weight: 700;
+                                margin: 0 4px 0 0;
+                                padding: 0 2px 0 4px;
                             }
                         }
                     }
+                }
+            }
+            .h-top {
+                width: 100%;
+                align-items: center;
+                background: rgba(0,0,0,.2);
+                display: flex;
+                justify-content: flex-start;
+                margin: 0 auto;
+                padding: 8px 3%;
+                -webkit-transition: all .3s linear;
+                -moz-transition: all .3s linear;
+                -o-transition: all .3s linear;
+                transition: all .3s linear;
+                img {
+                    width: 30px;
+                }
+                p {
+                    color: #fff;
+                    font-family: 'Barlow Condensed',sans-serif;
+                    font-size: 1em;
+                    letter-spacing: 1px;
+                    margin: 0 0 0 10px;
+                    text-transform: uppercase;
                 }
             }
         }
@@ -96,7 +133,7 @@
                 display: block;
                 margin: 0;
                 text-align: left;
-                padding: 100px 30px 120px;
+                padding: 160px 30px 120px;
                 background: hsla(0, 90%, 88%, 1);
                 background: linear-gradient(45deg, hsla(0, 100%, 91%, 1) 0%, hsla(252, 89%, 78%, .6) 100%);
                 background: -moz-linear-gradient(45deg, hsla(0, 100%, 91%, 1) 0%, hsla(252, 89%, 78%, .6) 100%);
@@ -107,7 +144,7 @@
                     h1 {
                         color: #353535;
                         font-family: 'Libre Baskerville', serif;
-                        font-size: 2.4em;
+                        font-size: 4em;
                     }
                     p {
                         color: #7d5b5b;
@@ -125,11 +162,12 @@
                         border: 2px solid #ff9898;
                         color: #977171;
                         cursor: pointer;
+                        font-family: 'Barlow Condensed',sans-serif;
                         font-size: 1em;
                         letter-spacing: 1px;
                         margin: 0 6px;
                         padding: 14px 22px;
-                        text-decoration: none;
+                        text-decoration: underline;
                         text-transform: uppercase;
                         -webkit-transition: all .3s linear;
                         -moz-transition: all .3s linear;
@@ -138,6 +176,7 @@
                         &:hover {
                             background: #ff9898;
                             color: #353535;
+                            text-decoration: none;
                         }
                     }
                     .liner {

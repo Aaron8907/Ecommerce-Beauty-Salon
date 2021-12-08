@@ -3,6 +3,7 @@
     import { Link } from "react-router-dom";
     import { useStoreContext } from "../../utils/GlobalState";
     import "../../styles/styles.min.css";
+    import dialog from "../../images/dialog.png";
 
     function Nav() {
         // Enter the store provider to obtain the firstName
@@ -51,7 +52,7 @@
 
         const navbar = document.querySelector('.header');
         window.onscroll = () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 navbar.classList.add('nav-active');
             } else {
                 navbar.classList.remove('nav-active');
@@ -60,6 +61,10 @@
 
         return (
             <header className="header">
+                <section className="h-top">
+                    <img src={dialog} alt="Dialog"/>
+                    <p>Dercos Energising Shampoo is in stock. Order now!</p>
+                </section>
                 <section className="h-wrapper">
                     <h1>
                         <Link to="/">Logo</Link>
