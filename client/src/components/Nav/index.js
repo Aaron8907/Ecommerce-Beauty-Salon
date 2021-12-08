@@ -4,6 +4,10 @@
     import { useStoreContext } from "../../utils/GlobalState";
     import "../../styles/styles.min.css";
     import dialog from "../../images/dialog.png";
+    import loginBtn from "../../images/login.png";
+    import logoutBtn from "../../images/logout.png";
+    import signBtn from "../../images/signup.png";
+    import historyBtn from "../../images/history.png";
 
     function Nav() {
         // Enter the store provider to obtain the firstName
@@ -19,6 +23,7 @@
                         <li className="mx-1">
                             <Link to="/orderHistory">
                                 Order History
+                                <img src={historyBtn} alt="Order History"/>
                             </Link>
                         </li>
                         <li className="mx-1">
@@ -28,6 +33,7 @@
                             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
                             <a href="/" onClick={() => Auth.logout()}>
                                 Logout
+                                <img src={logoutBtn} alt="Logout"/>
                             </a>
                         </li>
                     </ul>
@@ -38,11 +44,13 @@
                         <li className="mx-1">
                             <Link to="/signup">
                                 Signup
+                                <img src={signBtn} alt="Sign Up"/>
                             </Link>
                         </li>
                         <li className="mx-1">
                             <Link to="/login">
                                 Login
+                                <img src={loginBtn} alt="Login"/>
                             </Link>
                         </li>
                     </ul>

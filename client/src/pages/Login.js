@@ -7,6 +7,7 @@
     import { SET_FIRSTNAME } from '../utils/actions';
     import { useHistory } from 'react-router-dom';
     import avatar from "../../src/images/image-04.jpg"
+    import Footer from "../components/Footer";
 
     function Login(props) {
         const [formState, setFormState] = useState({ email: '', password: '' });
@@ -43,50 +44,53 @@
         };
 
         return (
-            <section className="container my-1 login">
-                <div className="l-data">
-                    <h1>No te pierdas nuestras promociones</h1>
-                    <p>Al ser estar registrad@ en nuestra tienda tendrás acceso a nuestros descuentos en productos inspirados para tu salud y belleza.</p>
-                </div>
-                <div className="l-wrapper">
-                    <div className="left">
-                        <img src={avatar} alt="Avatar"/>
+            <section>
+                <section className="container my-1 login">
+                    <div className="l-data">
+                        <h1>No te pierdas nuestras promociones</h1>
+                        <p>Al ser estar registrad@ en nuestra tienda tendrás acceso a nuestros descuentos en productos inspirados para tu salud y belleza.</p>
                     </div>
-                    <div className="right">
-                        <h2>Login</h2>
-                        <form onSubmit={handleFormSubmit}>
-                            <div className="flex-row space-between my-2">
-                                <label htmlFor="email">Correo electrónico</label>
-                                <input
-                                    placeholder="youremail@test.com"
-                                    name="email"
-                                    type="email"
-                                    id="email"
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="flex-row space-between my-2">
-                                <label htmlFor="pwd">Contraseña</label>
-                                <input
-                                    placeholder="******"
-                                    name="password"
-                                    type="password"
-                                    id="pwd"
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            {error ? (
-                                <div>
-                                    <p className="error-text">The provided credentials are incorrect</p>
+                    <div className="l-wrapper">
+                        <div className="left">
+                            <img src={avatar} alt="Avatar"/>
+                        </div>
+                        <div className="right">
+                            <h2>Login</h2>
+                            <form onSubmit={handleFormSubmit}>
+                                <div className="flex-row space-between my-2">
+                                    <label htmlFor="email">Correo electrónico</label>
+                                    <input
+                                        placeholder="youremail@test.com"
+                                        name="email"
+                                        type="email"
+                                        id="email"
+                                        onChange={handleChange}
+                                    />
                                 </div>
-                            ) : null}
-                            <div className="flex-row flex-end">
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                        <Link className="btn-signup" to="/signup">← Go to Signup</Link>
+                                <div className="flex-row space-between my-2">
+                                    <label htmlFor="pwd">Contraseña</label>
+                                    <input
+                                        placeholder="******"
+                                        name="password"
+                                        type="password"
+                                        id="pwd"
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                {error ? (
+                                    <div>
+                                        <p className="error-text">The provided credentials are incorrect</p>
+                                    </div>
+                                ) : null}
+                                <div className="flex-row flex-end">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                            <Link className="btn-signup" to="/signup">← Go to Signup</Link>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <Footer/>
             </section>
         );
     }
