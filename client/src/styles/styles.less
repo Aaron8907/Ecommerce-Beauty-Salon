@@ -4,7 +4,6 @@
         .header {
             width: 100%;
             background: none;
-            border-top: 1px solid #ff9898;
             padding: 0 0 30px;
             position: fixed;
             -webkit-transition: all .3s linear;
@@ -133,7 +132,7 @@
                 display: block;
                 margin: 0;
                 text-align: left;
-                padding: 160px 30px 120px;
+                padding: 160px 30px 140px;
                 background: hsla(0, 90%, 88%, 1);
                 background: linear-gradient(45deg, hsla(0, 100%, 91%, 1) 0%, hsla(252, 89%, 78%, .6) 100%);
                 background: -moz-linear-gradient(45deg, hsla(0, 100%, 91%, 1) 0%, hsla(252, 89%, 78%, .6) 100%);
@@ -487,6 +486,179 @@
                     }
                     &.right li {
                         text-align: right;
+                    }
+                }
+            }
+        }
+        .cart {
+            background: #fff;
+            border-radius: 0;
+            padding: 40px;
+            top: 70px;
+            right: 60px;
+            -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            -moz-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            h2 {
+                font-family: 'Libre Baskerville',serif;
+                border-bottom: 1px solid #ff9898;
+                margin: 10px 0 0;
+                padding: 0 0 20px;
+            }
+            .close {
+                top: 1em;
+                right: 1em;
+                img {
+                    width: 35px;
+                    margin: 0;
+                }
+            }
+            .flex-row {
+                width: 100%;
+                align-items: center;
+                border-bottom: 1px dashed #ffd1d1;
+                justify-content: flex-start;
+                display: flex;
+                padding: 16px 0 14px;
+                font-family: 'Barlow Condensed',sans-serif;
+                font-size: 1.2em;
+                span {
+                    font-size: 1em;
+                    font-weight: 700;
+                    margin: 0 4px 0 0;
+                    text-transform: uppercase;
+                }
+                input {
+                    border: 1px solid #ff9898;
+                    border-radius: 4px;
+                    font-size: .8em;
+                    margin: 0 6px;
+                    padding: 4px;
+                    text-align: center;
+                }
+                &.space-between {
+                    align-items: initial;
+                    border-bottom: 0;
+                    display: inline-grid;
+                    justify-content: normal;
+                    text-align: center;
+                    strong {
+                        border-bottom: 0;
+                        font-family: 'Libre Baskerville',serif;
+                        margin: 10px auto 24px;
+                    }
+                    button {
+                        background: 0 0;
+                        border: 2px solid #ff9898;
+                        color: #977171;
+                        font-family: 'Barlow Condensed',sans-serif;
+                        cursor: pointer;
+                        font-size: 1em;
+                        letter-spacing: 1px;
+                        margin: 0 6px;
+                        padding: 14px 22px;
+                        text-decoration: underline;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .login {
+            width: 90%;
+            max-width: 1000px;
+            padding: 160px 0 0;
+            margin: 0 auto;
+            .l-data {
+                margin: 0 auto;
+                text-align: center;
+                h1 {
+                    font-family: 'Barlow Condensed',sans-serif;
+                    font-size: 3em;
+                    margin: 0 auto;
+                }
+                p {
+                    width: 80%;
+                    color: #6c6060;
+                    font-family: 'Barlow Condensed',sans-serif;
+                    font-size: 1.6em;
+                    margin: 20px auto 40px;
+                }
+            }
+            .l-wrapper {
+                align-items: flex-start;
+                background: #fff;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                .left {
+                    width: 50%;
+                    display: inherit;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .right {
+                    width: 50%;
+                    h2 {
+                        width: 80%;
+                        font-family: 'Libre Baskerville',serif;
+                        font-size: 1.8em;
+                        margin: 40px auto;
+                    }
+                    form {
+                        .space-between {
+                            width: 80%;
+                            margin: 0 auto 20px;
+                            label {
+                                color: #ae8585;
+                                font-family: 'Barlow Condensed',sans-serif;
+                                font-size: 1.4em;
+                            }
+                            input {
+                                width: 90%;
+                                background-color: #fff;
+                                border: 1px solid #aeacb4;
+                                color: #6c6161!important;
+                                font-family: 'Barlow Condensed',sans-serif;
+                                font-size: 1.4em;
+                                margin: 6px auto 0;
+                                padding: 20px;
+                                &::placeholder {
+                                    color: #6c6161!important;
+                                    font-family: 'Barlow Condensed',sans-serif;
+                                    font-size: 1.4em;
+                                }
+                            }
+                        }
+                        .flex-end {
+                            width: 80%;
+                            margin: 0 auto 14px;
+                            button {
+                                width: 100%;
+                                background: #ff9898;
+                                border: 2px solid #ff9898;
+                                color: #ffffff;
+                                cursor: pointer;
+                                font-family: "Barlow Condensed",sans-serif;
+                                font-size: 1.4em;
+                                font-weight: 700;
+                                letter-spacing: 1px;
+                                margin: 20px 0 0;
+                                padding: 20px 22px;
+                                text-decoration: underline;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    .btn-signup {
+                        width: 80%;
+                        color: #000;
+                        display: block;
+                        font-family: 'Barlow Condensed',sans-serif;
+                        margin: 0 auto;
+                        text-align: center;
+                        text-transform: uppercase;
                     }
                 }
             }

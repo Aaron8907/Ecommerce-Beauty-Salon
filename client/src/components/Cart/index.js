@@ -8,6 +8,7 @@
     import { useStoreContext } from '../../utils/GlobalState';
     import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
     import './style.css';
+    import close from "../../images/close.png";
 
     const stripePromise = loadStripe('pk_test_51K2oNXG5lQzlmkpK6mxyUOiVBK424eOp7n5hGgAxHwZFDzXq6PwIVCentwOMX1xiA3GhnHC4Dz2sg43WQbsmpuWV00rJTbejIf');
 
@@ -73,7 +74,7 @@
         return (
             <div className="cart">
                 <div className="close" onClick={toggleCart}>
-                    [close]
+                    <img src={close} alt="Close"/>
                 </div>
                 <h2>Shopping Cart</h2>
                 {state.cart.length ? (
