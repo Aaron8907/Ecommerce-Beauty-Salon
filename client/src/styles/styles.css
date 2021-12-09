@@ -690,6 +690,9 @@ body .login .l-wrapper .right .product-data p.description {
   color: #6c6161;
   font-size: 1.4em;
 }
+body .login .l-wrapper .right .product-data p.price strong {
+  font-family: "Libre Baskerville";
+}
 body .login .l-wrapper .right .btn-signup {
   width: 80%;
   color: #000;
