@@ -623,6 +623,11 @@ body .login .l-wrapper .left {
 body .login .l-wrapper .left img {
   width: 100%;
 }
+body .login .l-wrapper .left.detail {
+  -webkit-box-shadow: 10px 0 34px -20px rgba(92, 51, 51, 0.4);
+  -moz-box-shadow: 10px 0 34px -20px rgba(92, 51, 51, 0.4);
+  box-shadow: 10px 0 34px -20px rgba(92, 51, 51, 0.4);
+}
 body .login .l-wrapper .right {
   width: 50%;
 }
@@ -680,8 +685,11 @@ body .login .l-wrapper .right .product-data {
   margin: 60px auto 0;
 }
 body .login .l-wrapper .right .product-data h2 {
-  font-size: 1.8em;
+  width: 100%;
+  font-size: 2.2em;
   margin: 0 0 40px;
+  text-align: center;
+  text-decoration: underline;
 }
 body .login .l-wrapper .right .product-data p {
   font-family: 'Barlow Condensed', sans-serif;
@@ -689,18 +697,54 @@ body .login .l-wrapper .right .product-data p {
 body .login .l-wrapper .right .product-data p.description {
   color: #6c6161;
   font-size: 1.4em;
+  text-align: center;
+}
+body .login .l-wrapper .right .product-data p.price {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1em;
+  margin: 30px auto 0;
+  padding: 0;
+  text-align: center;
 }
 body .login .l-wrapper .right .product-data p.price strong {
-  font-family: "Libre Baskerville";
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-body .login .l-wrapper .right .btn-signup {
+body .login .l-wrapper .right .product-data p.price .button-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0;
+}
+body .login .l-wrapper .right .product-data p.price .button-container button {
+  width: 46%;
+  background: #a995f8;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 2%;
+  padding: 14px 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+body .login .btn-signup {
   width: 80%;
-  color: #000;
+  color: #000000;
   display: block;
   font-family: 'Barlow Condensed', sans-serif;
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
+}
+body .login .btn-signup.product {
+  margin: 10px auto 0;
 }
 body .ticket {
   width: 90%;
