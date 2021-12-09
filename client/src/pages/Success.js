@@ -17,8 +17,6 @@ function Success() {
       const products = cart.map((item) => item._id);
 
       cart.forEach((item) => {
-        console.log(item);
-        alert(item._id + " " + item.purchaseQuantity);
         updateP({ variables: { "_id": item._id, "quantity": item.purchaseQuantity } } );
       });
 
