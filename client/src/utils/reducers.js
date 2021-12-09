@@ -30,6 +30,12 @@ export const reducer = (state, action) => {
         ...state,
         firstName: action.firstName,
       };
+    
+      case GET_FIRSTNAME:
+        return {
+          ...state,
+          firstName: action.firstName,
+        };
 
     case ADD_TO_CART:
       return {
