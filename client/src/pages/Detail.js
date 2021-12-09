@@ -90,9 +90,8 @@
                             <h1>No te pierdas nuestras promociones</h1>
                             <p>Al ser estar registrad@ en nuestra tienda tendrás acceso a nuestros descuentos en productos inspirados para tu salud y belleza.</p>
                         </div>
-                        <Link to="/">← Back to Products</Link>
                         <div className="l-wrapper">
-                            <div className="left">
+                            <div className="left detail">
                                 <img
                                     src={`/images/${currentProduct.image}`}
                                     alt={currentProduct.name}
@@ -103,18 +102,21 @@
                                     <h2>{currentProduct.name}</h2>
                                     <p className="description">{currentProduct.description}</p>
                                     <p className="price">
-                                        <strong>Price:</strong>${currentProduct.price}{' '}
-                                        <button onClick={addToCart}>Add to Cart</button>
-                                        <button
-                                            disabled={!cart.find((p) => p._id === currentProduct._id)}
-                                            onClick={removeFromCart}
-                                        >
-                                            Remove from Cart
-                                        </button>
+                                        <strong>Price: ${currentProduct.price}{' '}</strong>
+                                        <div className="button-container">
+                                            <button onClick={addToCart}>Add to Cart</button>
+                                            <button
+                                                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                                                onClick={removeFromCart}
+                                            >
+                                                Remove from Cart
+                                            </button>
+                                        </div>
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        <Link className="btn-signup product" to="/">← Back to Products</Link>
                     </section>
                 ) : null}
                 {loading ? <img src={spinner} alt="loading" /> : null}
