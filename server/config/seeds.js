@@ -90,28 +90,28 @@ db.once('open', async () => {
             quantity: 25
         },
         {
-            name: 'Circulo Quick Fix',
+            name: 'Círculo Quick Fix',
             brand: brands[5].id,
             description: 'Rápida, Hidrata y desenreda el cabello en tres minutos. Contiene ácido hialurónico. Deja el cabello sedoso y suave. Hidrata y desenreda el cabello, haciéndolo suave, sedoso y funcional.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'da-quick-fix-circle.jpg',
             category: categories[2]._id,
             price: 250.00,
             quantity: 25
         },
         {
-            name: 'Circulo Restless',
+            name: 'Círculo Restless',
             brand: brands[5].id,
             description:'Mascarilla invisible para quien desea cuidar del propio cabello mientras realiza otras actividades.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'da-restless-circle.jpg',
             category: categories[2]._id,
             price: 250.00,
             quantity: 25
         },
         {
-            name: 'Circulo Spotlight',
+            name: 'Círculo Spotlight',
             brand: brands[5].id,
             description:' Aporta un brillo extraordinario al instante. Perfecta para un evento o momento especial. Deja el cabello sedoso, fácil de peinar y suave. Le da al cabello un brillo perfecto y realza el color.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'da-spotlight-circle.jpg',
             category: categories[2]._id,
             price: 250.00,
             quantity: 25
@@ -120,7 +120,7 @@ db.once('open', async () => {
             name: 'Infusion Aceite Verde',
             brand: brands[6].id,
             description:'Infusion es un aceite protector para el cabello, gracias a su unica composicion con mas de 98% de ingredientes naturales, el cabello se restaura y se cuida.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-hair-treatment.jpg',
             category: categories[2]._id,
             price: 420.00,
             quantity: 20
@@ -129,7 +129,7 @@ db.once('open', async () => {
             name: 'Champú Densificador',
             brand: brands[6].id,
             description:'Champú anticaída para cabello fino y cuero cabelludo sensible',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-densifying.jpg',
             category: categories[2]._id,
             price: 347.00,
             quantity: 30
@@ -138,7 +138,7 @@ db.once('open', async () => {
             name: 'Champú Reforzante',
             brand: brands[6].id,
             description:'Champú anticaída para cabello debilitado y cuero cabelludo graso',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-reinforcing.jpg',
             category: categories[2]._id,
             price: 347.00,
             quantity: 20
@@ -147,7 +147,7 @@ db.once('open', async () => {
             name: 'Champú Verde Diario',
             brand: brands[6].id,
             description:'Para todo tipo de cabello; también ideal para uso diario.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-green-infusion.jpg',
             category: categories[2]._id,
             price: 347.00,
             quantity: 20
@@ -156,7 +156,7 @@ db.once('open', async () => {
             name: 'Champú Revitalizador Intensivo',
             brand: brands[6].id,
             description:'Hidrata profundamente y ejerce una acción delicada en el cuero cabelludo.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-ultimate-care.jpg',
             category: categories[2]._id,
             price: 415.00,
             quantity: 20
@@ -165,7 +165,7 @@ db.once('open', async () => {
             name: 'Acondicionador Revitalizador Intensivo',
             brand: brands[6].id,
             description:'Hidrata profundamente y ejerce una acción delicada en el cuero cabelludo.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-ultimate.jpg',
             category: categories[2]._id,
             price: 415.00,
             quantity: 20
@@ -174,7 +174,7 @@ db.once('open', async () => {
             name: 'Acondicionador Verde Diario',
             brand: brands[6].id,
             description:'Hidrata profundamente y ejerce una acción delicada en el cuero cabelludo.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-green-conditioning.jpg',
             category: categories[2]._id,
             price: 347.00,
             quantity: 20
@@ -183,7 +183,7 @@ db.once('open', async () => {
             name: 'Acondicionador Cuerpo Instantaneo',
             brand: brands[6].id,
             description:'Hidrata profundamente y ejerce una acción delicada en el cuero cabelludo.',
-            image: 'fc-vichy-slow-age.jpg',
+            image: 'mo-instant-bodifying.jpg',
             category: categories[2]._id,
             price: 330.00,
             quantity: 20
