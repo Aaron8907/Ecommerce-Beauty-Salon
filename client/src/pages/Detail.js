@@ -85,29 +85,37 @@
         return (
             <>
                 {currentProduct && cart ? (
-                    <div className="container my-1">
+                    <section className="container my-1 login">
+                        <div className="l-data">
+                            <h1>No te pierdas nuestras promociones</h1>
+                            <p>Al ser estar registrad@ en nuestra tienda tendrás acceso a nuestros descuentos en productos inspirados para tu salud y belleza.</p>
+                        </div>
                         <Link to="/">← Back to Products</Link>
-
-                        <h2>{currentProduct.name}</h2>
-
-                        <p>{currentProduct.description}</p>
-
-                        <p>
-                            <strong>Price:</strong>${currentProduct.price}{' '}
-                            <button onClick={addToCart}>Add to Cart</button>
-                            <button
-                                disabled={!cart.find((p) => p._id === currentProduct._id)}
-                                onClick={removeFromCart}
-                            >
-                                Remove from Cart
-                            </button>
-                        </p>
-
-                        <img
-                            src={`/images/${currentProduct.image}`}
-                            alt={currentProduct.name}
-                        />
-                    </div>
+                        <div className="l-wrapper">
+                            <div className="left">
+                                <img
+                                    src={`/images/${currentProduct.image}`}
+                                    alt={currentProduct.name}
+                                />
+                            </div>
+                            <div className="right">
+                                <div className="product-data">
+                                    <h2>{currentProduct.name}</h2>
+                                    <p className="description">{currentProduct.description}</p>
+                                    <p className="price">
+                                        <strong>Price:</strong>${currentProduct.price}{' '}
+                                        <button onClick={addToCart}>Add to Cart</button>
+                                        <button
+                                            disabled={!cart.find((p) => p._id === currentProduct._id)}
+                                            onClick={removeFromCart}
+                                        >
+                                            Remove from Cart
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 ) : null}
                 {loading ? <img src={spinner} alt="loading" /> : null}
                 <Footer/>
