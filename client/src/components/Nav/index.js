@@ -59,11 +59,14 @@
         }
 
         const navbar = document.querySelector('.header');
+        const cart = document.querySelector('.cart-closed');
         window.onscroll = () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 10) {
                 navbar.classList.add('nav-active');
+                cart.classList.add('cart-closed-active');
             } else {
                 navbar.classList.remove('nav-active');
+                cart.classList.remove('cart-closed-active');
             }
         };
 

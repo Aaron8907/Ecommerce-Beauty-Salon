@@ -10,7 +10,7 @@
                         <h1>Welcome message</h1>
                         <div className="liner"></div>
                         <p>
-                            En Lety Alvarez <em>(Alta peluquería)</em> nos destacamos por nuestros años de experiencia en pasarelas y farandula, ofrecemos un servicio de primera calidad con productos de primera. Nuestros estilistas están certificados en las últimas tendencias internacionales para asegurar estar a la vanguardia y ofrecer a nuestros clientes una experiencia única. Nuestro salón está diseñado para hacerte sentir en casa en un ambiente limpio, tranquilo, con gran comodidad y sobre todo con los protocolos covid para asegurar tu bienestar.
+                            En Lety Alvarez <em>(Alta peluquería)</em> nos destacamos por nuestros años de experiencia en pasarelas y farandula, ofrecemos un servicio de primera calidad con productos de primera. Nuestros estilistas están certificados en las últimas tendencias internacionales para asegurar estar a la vanguardia y ofrecer a nuestros clientes una experiencia única. El salón está diseñado para hacerte sentir en casa en un ambiente limpio, tranquilo, con gran comodidad y sobre todo con los protocolos covid para asegurar tu bienestar.
                         </p>
                         <button onClick="location.href='http://localhost:3000/#store'">Visita la tienda</button>
                         <button onClick="location.href='http://localhost:3000/#contact'">Agenda tu cita</button>
