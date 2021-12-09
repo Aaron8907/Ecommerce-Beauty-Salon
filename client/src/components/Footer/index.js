@@ -43,7 +43,7 @@
                     <section className="below">
                         <ul>
                             <li><a href="http://localhost:3000/#About">#About</a></li>
-                            <li><a href="http://localhost:3000/#Store">#Projects</a></li>
+                            <li><a href="http://localhost:3000/#Store">#Store</a></li>
                             <li><a href="http://localhost:3000/#Contact">#Contact</a></li>
                         </ul>
                         <ul className="right">
