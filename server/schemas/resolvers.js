@@ -73,8 +73,7 @@
                     const price = await stripe.prices.create({
                         product: product.id,
                         unit_amount: products[i].price * 100,
-                        currency: 'mxn
-                        ',
+                        currency: 'mxn',
                     });
 
                     line_items.push({
