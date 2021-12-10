@@ -28,27 +28,27 @@
 
   ### Products page
   
-  ![Products](./images/products.png)
+  ![Products](./images/products.PNG)
 
   ### SignUp page
   
-  ![SignUp](./images/signUp.png)
+  ![SignUp](./images/signUp.PNG)
 
   ### LogIn page
   
-  ![LogIn](./images/logIn.png)
+  ![LogIn](./images/logIn.PNG)
 
   ### Order History page
   
-  ![OrderHistory](./images/orderHistory.png)
+  ![OrderHistory](./images/orderHistory.PNG)
 
   ### Shopping Cart page
   
-  ![ShoppingCart](./images/shoppingCart.png)
+  ![ShoppingCart](./images/shoppingCart.PNG)
 
   ### Checkout page
   
-  ![Checkout](./images/checkout.png)
+  ![Checkout](./images/checkout.PNG)
 
   ---  
   
