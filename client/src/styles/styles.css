@@ -864,6 +864,16 @@ body .hide-me {
   body .stage .s-wrapper .s-info {
     max-width: 90%;
   }
+  body .login .l-wrapper .right h2 {
+    margin: 40px auto 20px;
+  }
+  body .login .l-wrapper .right form .space-between input {
+    padding: 14px;
+  }
+  body .login .l-wrapper .right form .flex-end button {
+    margin: 14px 0 0;
+    padding: 14px 22px;
+  }
 }
 @media screen and (max-width: 1024px) {
   body .stage .s-wrapper .s-info h1 {
@@ -902,6 +912,20 @@ body .hide-me {
   }
   body .footer .below {
     width: 90%;
+  }
+  body .login .l-wrapper {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  body .login .l-wrapper .left {
+    width: 100%;
+  }
+  body .login .l-wrapper .right {
+    width: 100%;
+  }
+  body .login .btn-signup {
+    margin: 0 auto 30px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1039,6 +1063,9 @@ body .hide-me {
     display: block;
     margin: 10px auto 0;
   }
+  body .login .l-data h1 {
+    font-size: 2.2em;
+  }
 }
 @media screen and (max-width: 480px) {
   body .stage .s-wrapper {
@@ -1062,6 +1089,16 @@ body .hide-me {
   }
   body .footer p {
     font-size: 1.4em;
+  }
+  body .login .l-data h1 {
+    font-size: 2em;
+  }
+  body .login .l-data p {
+    width: 100%;
+    font-size: 1.3em;
+  }
+  body .login .l-wrapper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 400px) {
