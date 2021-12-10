@@ -883,10 +883,6 @@
                 text-transform: uppercase;
             }
         }
-        .when-empty{}
-        .hide-me {
-            display: none!important;
-        }
     }
 
     @media screen and (max-width: 1200px) {
@@ -902,25 +898,15 @@
                 }
             }
             .login {
-                .l-data {
-                    h1 {}
-                    p {}
-                }
                 .l-wrapper {
-                    .left {
-                        img {}
-                        &.detail {}
-                    }
                     .right {
                         h2 {
                             margin: 40px auto 20px;
                         }
                         form {
                             .space-between {
-                                label {}
                                 input {
                                     padding: 14px;
-                                    &::placeholder {}
                                 }
                             }
                             .flex-end {
@@ -930,22 +916,7 @@
                                 }
                             }
                         }
-                        .product-data {
-                            h2 {}
-                            p {
-                                &.description {}
-                                &.price {
-                                    strong {}
-                                    .button-container {
-                                        button {}
-                                    }
-                                }
-                            }
-                        }
                     }
-                }
-                .btn-signup {
-                    &.product {}
                 }
             }
         }
@@ -1004,42 +975,26 @@
                 }
             }
             .login {
-                .l-data {
-                    h1 {}
-                    p {}
-                }
                 .l-wrapper {
                     width: 90%;
                     max-width: 480px;
                     margin: 0 auto;
                     .left {
                         width: 100%;
-                        img {}
-                        &.detail {}
                     }
                     .right {
                         width: 100%;
-                        h2 {
-                        }
-                        form {
-                            .space-between {
-                                label {}
-                                input {
-                                    &::placeholder {}
-                                }
-                            }
-                            .flex-end {
-                                button {}
-                            }
-                        }
                         .product-data {
-                            h2 {}
                             p {
-                                &.description {}
                                 &.price {
-                                    strong {}
                                     .button-container {
-                                        button {}
+                                        display: block;
+                                        margin: 0 auto 30px;
+                                        text-align: center;
+                                        button {
+                                            width: 100%;
+                                            margin: 0 0 10px;
+                                        }
                                     }
                                 }
                             }
@@ -1048,7 +1003,6 @@
                 }
                 .btn-signup {
                     margin: 0 auto 30px;
-                    &.product {}
                 }
             }
         }
@@ -1142,7 +1096,6 @@
         body {
             .header {
                 .h-wrapper {
-                    h1 {}
                     nav {
                         ul {
                             li {
@@ -1247,6 +1200,13 @@
                     }
                 }
             }
+            .ticket {
+                .t-wrapper {
+                    h1 {
+                        font-size: 2.2em;
+                    }
+                }
+            }
         }
     }
     @media screen and (max-width: 480px) {
@@ -1294,41 +1254,40 @@
                 }
                 .l-wrapper {
                     width: 100%;
-                    .left {
-                        img {}
-                        &.detail {}
+                }
+            }
+            .ticket {
+                .t-wrapper {
+                    h1 {
+                        font-size: 2em;
                     }
-                    .right {
-                        h2 {
-                        }
-                        form {
-                            .space-between {
-                                label {}
-                                input {
-                                    &::placeholder {}
-                                }
-                            }
-                            .flex-end {
-                                button {}
-                            }
-                        }
-                        .product-data {
-                            h2 {}
-                            p {
-                                &.description {}
-                                &.price {
-                                    strong {}
-                                    .button-container {
-                                        button {}
+                    .subtitle {
+                        width: 100%;
+                        font-size: 1.3em;
+                    }
+                    .t-data {
+                        h3 {}
+                        .t-items {
+                            .card {
+                                width: 100%;
+                                .t-content {
+                                    img {}
+                                    p {
+                                        font-size: 1.2em;
+                                        &.name {}
+                                        &.brand {}
+                                    }
+                                    .price {
+                                        font-size: 1.2em;
+                                        img {}
                                     }
                                 }
+                                &:hover {}
                             }
                         }
                     }
                 }
-                .btn-signup {
-                    &.product {}
-                }
+                .btn-signup {}
             }
         }
     }

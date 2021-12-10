@@ -854,9 +854,6 @@ body .ticket .btn-signup {
   text-align: center;
   text-transform: uppercase;
 }
-body .hide-me {
-  display: none!important;
-}
 @media screen and (max-width: 1200px) {
   body .cart-closed {
     right: 30px;
@@ -923,6 +920,15 @@ body .hide-me {
   }
   body .login .l-wrapper .right {
     width: 100%;
+  }
+  body .login .l-wrapper .right .product-data p.price .button-container {
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  body .login .l-wrapper .right .product-data p.price .button-container button {
+    width: 100%;
+    margin: 0 0 10px;
   }
   body .login .btn-signup {
     margin: 0 auto 30px;
@@ -1066,6 +1072,9 @@ body .hide-me {
   body .login .l-data h1 {
     font-size: 2.2em;
   }
+  body .ticket .t-wrapper h1 {
+    font-size: 2.2em;
+  }
 }
 @media screen and (max-width: 480px) {
   body .stage .s-wrapper {
@@ -1099,6 +1108,22 @@ body .hide-me {
   }
   body .login .l-wrapper {
     width: 100%;
+  }
+  body .ticket .t-wrapper h1 {
+    font-size: 2em;
+  }
+  body .ticket .t-wrapper .subtitle {
+    width: 100%;
+    font-size: 1.3em;
+  }
+  body .ticket .t-wrapper .t-data .t-items .card {
+    width: 100%;
+  }
+  body .ticket .t-wrapper .t-data .t-items .card .t-content p {
+    font-size: 1.2em;
+  }
+  body .ticket .t-wrapper .t-data .t-items .card .t-content .price {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 400px) {
