@@ -52,11 +52,9 @@
                     <p className="quantity">{quantity} {pluralize("item", quantity)} in stock</p>
                     <p className="price">${price}</p>
                 </div>
-               
-
-                <button onClick={addToCart}>Add to cart</button>
-
-                
+                {`${quantity}` <= 0 ?
+                <button style={{display: 'none'}} id={`${_id}`} onClick={addToCart}>Add to cart</button>
+                 : <button style={{display: 'block'}} id={`${_id}`} onClick={addToCart}>Add to cart</button>}
             </div>
         );
     }

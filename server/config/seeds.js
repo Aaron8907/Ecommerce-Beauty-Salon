@@ -20,6 +20,7 @@ db.once('open', async () => {
         { name: 'TonyMoly' },
         { name: 'Davines' },
         { name: 'Morphosis' },
+        { name: 'Framesi' },
     ]);
 
     console.log('categories seeded');
@@ -187,6 +188,15 @@ db.once('open', async () => {
             category: categories[2]._id,
             price: 330.00,
             quantity: 20
+        },
+        {
+            name: '119 For Me',
+            brand: brands[7].id,
+            description:'Para peinados lisos efecto espejo',
+            image: 'mo-instant-bodifying.jpg',
+            category: categories[2]._id,
+            price: 225.00,
+            quantity: 0
         },
     ]);
 

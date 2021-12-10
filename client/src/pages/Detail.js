@@ -104,8 +104,14 @@
                                     <p className="price">
                                         <strong>Price: ${currentProduct.price}{' '}</strong>
                                         <div className="button-container">
-                                            <button onClick={addToCart}>Add to Cart</button>
-                                            <button
+                                            {`${currentProduct.quantity}` <= 0 ?
+                                                <button style={{display: 'none'}} id={`${currentProduct._id}`}
+                                                        onClick={addToCart}>Add to Cart</button>
+                                                :
+                                                <button style={{display: 'block'}} id={`${currentProduct._id}`}
+                                                        onClick={addToCart}>Add to Cart</button>
+                                            }
+                                                <button
                                                 disabled={!cart.find((p) => p._id === currentProduct._id)}
                                                 onClick={removeFromCart}
                                             >

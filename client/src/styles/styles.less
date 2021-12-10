@@ -114,9 +114,9 @@
                 }
             }
             .h-top {
-                width: 100%;
+                width: 94%;
                 align-items: center;
-                background: rgba(0,0,0,.2);
+                background: rgba(0,0,0,.3);
                 display: flex;
                 justify-content: flex-start;
                 margin: 0 auto;
@@ -882,5 +882,81 @@
                 text-align: center;
                 text-transform: uppercase;
             }
+        }
+        .when-empty{}
+        .hide-me {
+            display: none!important;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        body {
+            .cart-closed {
+                right: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        body {
+
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body {
+            .cart-closed {
+                position: fixed;
+            }
+        }
+    }
+    @media screen and (max-width: 640px) {
+        body {
+            .header {
+                .h-top {
+                    background: rgba(0,0,0,.8);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        body {
+            .header {
+                .h-wrapper {
+                    background: #fff;
+                    width: 92%;
+                    margin: 0 auto;
+                    padding: 10px 4%;
+                    h1 {
+                        font-size: 2.4em;
+                    }
+                    nav {
+                        ul {
+                            li {
+                                a {
+                                    color: #7466aa;
+                                    text-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .h-top {
+                    overflow: hidden;
+                    overflow-y: scroll;
+                }
+            }
+            .cart-closed {
+                top: 62px;
+                right: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        body {
+
+        }
+    }
+    @media screen and (max-width: 360px) {
+        body {
+
         }
     }
