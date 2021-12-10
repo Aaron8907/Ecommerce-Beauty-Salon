@@ -6,10 +6,17 @@
     import avatar from "../images/image-05.jpg";
     import Footer from "../components/Footer";
 
+    import { useHistory } from 'react-router-dom';
+
+    import { SET_FIRSTNAME } from '../utils/actions';
     function Signup(props) {
         const [formState, setFormState] = useState({ email: '', password: '' });
         const [addUser] = useMutation(ADD_USER);
 
+
+
+        let history = useHistory();
+        
         const handleFormSubmit = async (event) => {
             event.preventDefault();
             const mutationResponse = await addUser({
@@ -20,8 +27,16 @@
                     lastName: formState.lastName,
                 },
             });
+
+
             const token = mutationResponse.data.addUser.token;
-            Auth.login(token);
+
+            
+            const authSuccess = Auth.login(token);
+                console.log(authSuccess);
+                if (authSuccess) {
+                    history.push('/')
+                }
         };
 
         const handleChange = (event) => {

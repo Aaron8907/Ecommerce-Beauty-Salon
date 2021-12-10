@@ -9,15 +9,35 @@
     import signBtn from "../../images/signup.png";
     import historyBtn from "../../images/history.png";
 
+    import { useQuery } from "@apollo/client";
+    import { QUERY_USER } from "../../utils/queries";
+    
     function Nav() {
         // Enter the store provider to obtain the firstName
         const [state, dispatch] = useStoreContext();
         // console.log(state);
-        function showNavigation(name) {
-            console.log(name, state);
+
+
+         const { data } =  useQuery(QUERY_USER);
+        let user;
+
+        if (data) {
+            user = data.user;
+            //console.log(user);
+        }
+
+
+        
+        function showNavigation(user,name2) {
+            console.log(user);
+            
+            
+    
             // Get back the argument/prop
             if (Auth.loggedIn()) {
-                // console.log(Auth)
+                
+
+                
                 return (
                     <ul className="flex-row">
                         <li className="mx-1">
@@ -27,7 +47,7 @@
                             </Link>
                         </li>
                         <li className="mx-1">
-                            Hello <span>{name}</span>!
+                            Hello <span>{user ? (user.firstName) : name2}</span>!
                         </li>
                         <li className="mx-1">
                             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -81,7 +101,7 @@
                         <Link to="/">Logo</Link>
                     </h1>
                     <nav>
-                        {showNavigation(state.firstName)}
+                        {showNavigation(user,state.firstName)}
                     </nav>
                 </section>
             </header>
