@@ -210,7 +210,7 @@ db.once('open', async () => {
         password: '12345',
         orders: [
             {
-                products: [products[0]._id, products[0]._id, products[1]._id]
+                products: [products[4]._id, products[0]._id, products[1]._id]
             }
         ]
     });
@@ -222,7 +222,7 @@ db.once('open', async () => {
         password: '12345',
         orders: [
             {
-                products: [products[0]._id, products[0]._id, products[1]._id]
+                products: [products[2]._id, products[0]._id, products[1]._id]
             }
         ]
     });
@@ -234,7 +234,7 @@ db.once('open', async () => {
         password: '12345',
         orders: [
             {
-                products: [products[0]._id, products[0]._id, products[1]._id]
+                products: [products[3]._id, products[2]._id, products[1]._id]
             }
         ]
     });
@@ -243,6 +243,30 @@ db.once('open', async () => {
         firstName: 'Carlos',
         lastName: 'Aguirre',
         email: 'carlos@mail.com',
+        password: '12345',
+        orders: [
+            {
+                products: [products[0]._id, products[7]._id, products[3]._id]
+            }
+        ]
+    });
+
+    await User.create({
+        firstName: 'Fer',
+        lastName: 'Sosa',
+        email: 'fer@mail.com',
+        password: '12345',
+        orders: [
+            {
+                products: [products[0]._id, products[0]._id, products[1]._id]
+            }
+        ]
+    });
+
+    await User.create({
+        firstName: 'Omar',
+        lastName: 'Patel',
+        email: 'omar@mail.com',
         password: '12345',
         orders: [
             {

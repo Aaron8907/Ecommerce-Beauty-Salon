@@ -98,7 +98,7 @@
                 </section>
                 <section className="h-wrapper">
                     <h1>
-                        <Link to="/">Logo</Link>
+                        <Link className="logo" to="/">Logo</Link>
                     </h1>
                     <nav>
                         {showNavigation(user,state.firstName)}
