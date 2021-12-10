@@ -42,7 +42,7 @@
         }
 
         return (
-            <section className="store">
+            <section className="store" id="store">
                 <section className="title">
                     <h2>Our Products</h2>
                     <div className="liner"></div>

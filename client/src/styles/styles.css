@@ -584,6 +584,9 @@ body .cart .flex-row.space-between button {
   text-decoration: underline;
   text-transform: uppercase;
 }
+body .cart .trash {
+  cursor: pointer;
+}
 body .login {
   width: 90%;
   max-width: 1000px;
